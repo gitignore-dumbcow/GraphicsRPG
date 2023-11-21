@@ -49,10 +49,14 @@ public class PlayerController : MonoBehaviour
 
         if (dash > 0)
         {
+            
             dash = Mathf.Lerp(dash, 0, Time.deltaTime * dashFalloff);
         }
-        else dash = 0;
-
+        else
+        {
+            
+            dash = 0;
+        }
         _dashCD -= Time.fixedDeltaTime;
     }
 
