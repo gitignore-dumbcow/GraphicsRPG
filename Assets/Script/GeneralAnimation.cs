@@ -10,6 +10,10 @@ public class GeneralAnimation : MonoBehaviour
     float frequency;
     float t, targetFlip;
     Rigidbody2D rb;
+
+    public bool hop;
+    public bool sway;
+    public bool flip;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +27,13 @@ public class GeneralAnimation : MonoBehaviour
         frequency = Vector3.Distance(rb.velocity, Vector3.zero);
         t += Time.deltaTime * frequency * magnitude;
 
-        Sway();
-        Flip();
-        Hop();
-        
+        if (sway) Sway();
+        if (flip) Flip();
+        if (hop) Hop();
 
-        _flip = Mathf.Lerp(_flip, targetFlip, Time.deltaTime * strenght);
+
+        if (Mathf.Abs(targetFlip - _flip) < 50) _flip = targetFlip;
+        _flip = Mathf.Lerp(_flip, targetFlip, Time.deltaTime * strenght * 2);
 
         transform.rotation = Quaternion.Euler(0, _flip, _angle);
     }

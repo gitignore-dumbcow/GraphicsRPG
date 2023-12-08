@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a4c00eba2e6095843b9cf6ca23a7d01f
+guid: d4ab10cf919c314479f851d68880f03e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Loot_0
+      name: Equipment_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 421
-        width: 55
-        height: 70
+        x: 0
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087f87d3cdfeaa54aa5c1a38273092a1
-      internalID: 2064532796
+      spriteID: 42a06e26056d72c468a510864e5fbcc6
+      internalID: 801114990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Loot_1
+      name: Equipment_1
       rect:
         serializedVersion: 2
-        x: 167
-        y: 411
-        width: 55
-        height: 79
+        x: 130
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27769d88101461d49b65395ae4344ded
-      internalID: 159808432
+      spriteID: 03abf696e06ee594195e29dc85984856
+      internalID: 1144645203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Loot_2
+      name: Equipment_2
       rect:
         serializedVersion: 2
-        x: 18
-        y: 278
-        width: 109
-        height: 93
+        x: 260
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 176bea55c2488194b8a3a290c7c8b495
-      internalID: -20967262
+      spriteID: 276cae82852296749926c36abbc594f7
+      internalID: 359622764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Loot_3
+      name: Equipment_3
       rect:
         serializedVersion: 2
-        x: 167
-        y: 289
-        width: 65
-        height: 71
+        x: 390
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2841fbc08dffebb4a952db2991439dc4
-      internalID: 242634457
+      spriteID: fea14b52bd56d114e9ffcf3420a810ae
+      internalID: -1049948724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Loot_4
+      name: Equipment_4
       rect:
         serializedVersion: 2
-        x: 26
-        y: 154
-        width: 99
-        height: 90
+        x: 520
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6516adc0333f8d419eb2abf6e0d6033
-      internalID: 796114248
+      spriteID: 8af7efcc63ba67142a1b12458044e23e
+      internalID: 306235708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Loot_5
+      name: Equipment_5
       rect:
         serializedVersion: 2
-        x: 159
-        y: 137
-        width: 72
-        height: 115
+        x: 650
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,41 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc95e7d305e3c346b24f4981c77cbf5
-      internalID: -1190702599
+      spriteID: eca04c328f264314397a2836507ab188
+      internalID: 1555141860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Loot_6
+      name: Equipment_6
       rect:
         serializedVersion: 2
-        x: 43
-        y: 10
-        width: 71
-        height: 103
-      alignment: 9
-      pivot: {x: 0.35540396, y: 0.52135843}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c329884cf1b06ce4293b63d2dde167e9
-      internalID: -853099524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Loot_7
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 1
-        width: 71
-        height: 136
+        x: 780
+        y: 0
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +263,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d4328f6859faa54689bdfbe31ad34bf
-      internalID: 1688370557
+      spriteID: 7e97a74ebb168204bbdd6651eaf4373f
+      internalID: 1679360977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80ffd87994173b448311046480c0d9f
+      internalID: -1231566438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18696f3bf439f9e40a89df1edf45b272
+      internalID: -1917005233
       vertices: []
       indices: 
       edges: []
@@ -301,14 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Loot_0: 2064532796
-      Loot_1: 159808432
-      Loot_2: -20967262
-      Loot_3: 242634457
-      Loot_4: 796114248
-      Loot_5: -1190702599
-      Loot_6: -853099524
-      Loot_7: 1688370557
+      Equipment_0: 801114990
+      Equipment_1: 1144645203
+      Equipment_2: 359622764
+      Equipment_3: -1049948724
+      Equipment_4: 306235708
+      Equipment_5: 1555141860
+      Equipment_6: 1679360977
+      Equipment_7: -1231566438
+      Equipment_8: -1917005233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

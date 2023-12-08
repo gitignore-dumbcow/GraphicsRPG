@@ -22,10 +22,22 @@ public class Shadow
         shadow.localScale = realScale;
         shadowScale = realScale;
     }
-
+    public bool CheckAlive()
+    {
+        if(_caster == null)
+        {
+            return false;
+        }
+        return true;
+    }
     public Transform GetGraphic()
     {
         return _graphic;
+    }
+
+    public Transform GetShadow()
+    {
+        return _shadow;
     }
 
     public void ResetPosition()
@@ -81,14 +93,24 @@ public class ShadowCaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach(Shadow shadow in shadows)
+        for(int i = 0; i < shadows.Count; i++)
         {
-            shadow.ResetPosition();
+            if (!shadows[i].CheckAlive())
+            {
+                Destroy(shadows[i].GetShadow().gameObject);
+                shadows.Remove(shadows[i]);
+                
+                continue;
+            }
 
-            float intensity = 1 / Vector3.Distance(shadow.GetGraphic().position, shadow.GetShadowPosition()) * shadowScale;
+            shadows[i].ResetPosition();
 
-            shadow.SetScale(shadow.shadowScale * intensity);
-            shadow.SetAlpha(transparency * intensity);
+            float intensity = 1 / Vector3.Distance(shadows[i].GetGraphic().position, shadows[i].GetShadowPosition()) * shadowScale;
+
+            shadows[i].SetScale(shadows[i].shadowScale * intensity);
+            shadows[i].SetAlpha(transparency * intensity);
         }
+
+        
     }
 }

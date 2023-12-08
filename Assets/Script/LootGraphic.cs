@@ -2,16 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum Rarity
-{
-    Common,
-    Uncommon,
-    Rare,
-    Epic,
-    Legendary
-}
-public class Loot : MonoBehaviour
+public class LootGraphic : MonoBehaviour
 {
     const float magnitude = 0.15f;
     const float frequency = 2f;
@@ -21,24 +12,36 @@ public class Loot : MonoBehaviour
 
     Transform graphic;
 
+    public GameObject @object;
+
     public Rarity rarity;
+    public EquipmentType type;
+
+    Loot loot;
 
     // Start is called before the first frame update
     void Start()
     {
         t += Random.Range(-1f, 1f);
         graphic = transform.GetChild(0);
-        startY = graphic.position.y;
+        loot = new Loot(rarity, type, @object);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // Root
+        startY = transform.position.y;
         t += Time.deltaTime * frequency;
-        // Item
+
+        // Float
         float y = offset + startY + 0.5f * (1 + Mathf.Sin(t)) * magnitude;
         graphic.position = new Vector3(transform.position.x, y, 0);
         
+    }
+
+    public Loot GetLoot()
+    {
+        return loot;
     }
 }

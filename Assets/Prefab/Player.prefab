@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2840412433575510564}
   - component: {fileID: 4159295767623518332}
   - component: {fileID: 7582610901295633543}
+  - component: {fileID: 2914077794322350128}
   - component: {fileID: 1972676302417084693}
   - component: {fileID: 2771482164538331442}
   m_Layer: 0
@@ -53,7 +54,7 @@ MonoBehaviour:
   movementSpeed: 2
   acceleration: 10
   maxDash: 2
-  dashCD: 1.2
+  dashCD: 3
   dashFalloff: 5
 --- !u!114 &4159295767623518332
 MonoBehaviour:
@@ -88,6 +89,18 @@ MonoBehaviour:
   rare: {r: 0.35283017, g: 0.70879656, b: 1, a: 1}
   epic: {r: 0.71496284, g: 0.37254906, b: 1, a: 1}
   legendary: {r: 1, g: 0.058823526, b: 0.14146692, a: 1}
+--- !u!114 &2914077794322350128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181946846773474637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62d41e10870a8b47a648df84793a0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1972676302417084693
 Rigidbody2D:
   serializedVersion: 4
@@ -222,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c9b99d0f02776fa49bfc914f5cabe1fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

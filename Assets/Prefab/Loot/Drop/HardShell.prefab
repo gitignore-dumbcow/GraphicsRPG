@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -720387843, guid: a4c00eba2e6095843b9cf6ca23a7d01f, type: 3}
+  m_Sprite: {fileID: 796114248, guid: a4c00eba2e6095843b9cf6ca23a7d01f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.015625, y: 1.015625}
+  m_Size: {x: 0.0007728337, y: 0.00070257613}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3263614550492759040}
-  - component: {fileID: 2033633951040845953}
   - component: {fileID: 9197534091455681770}
+  - component: {fileID: 94430900750944083}
   m_Layer: 0
   m_Name: HardShell
   m_TagString: Loot
@@ -116,21 +116,8 @@ Transform:
   m_Children:
   - {fileID: 7108274869693677587}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2033633951040845953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5035810822465238607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c656ac03ef2fa408525cee7eb9be99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rarity: 2
 --- !u!58 &9197534091455681770
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +153,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.07
+--- !u!114 &94430900750944083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035810822465238607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c656ac03ef2fa408525cee7eb9be99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object: {fileID: 4316058572763879071, guid: ba1a972280790b746a237c18e7e1ccb2, type: 3}
+  rarity: 1
+  type: 1

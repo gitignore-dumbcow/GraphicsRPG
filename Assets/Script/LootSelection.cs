@@ -6,13 +6,17 @@ public class LootSelection : MonoBehaviour
 {
     [SerializeField] float pickupRange;
     [SerializeField] Transform lootSelection;
-    Transform selecting;
+    Transform selecting, selectedLooting;
     SpriteRenderer graphic;
     [SerializeField] Color common, uncommon, rare, epic, legendary;
+    bool looting = false;
+    Inventory inventory;
+    
     // Start is called before the first frame update
     void Start()
     {
         graphic = lootSelection.GetComponent<SpriteRenderer>();
+        inventory = GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -26,24 +30,41 @@ public class LootSelection : MonoBehaviour
         {
             if(collider.transform.CompareTag("Loot"))
             {
-                loots.Add(collider.transform);
+                if(selectedLooting != collider.transform)
+                {
+                    loots.Add(collider.transform);
+
+                }
+                
             }
         }
 
-        // Set selection
-        if(loots.Count > 0) 
+
+        // Set selecting
+        if (loots.Count > 0) 
         {
             foreach (Transform loot in loots)
             {
+               
                 if(selecting == null)
                 {
+                    
                     selecting = loot;
                     continue;
                 }
 
                 if (Vector3.Distance(transform.position, loot.position) < Vector3.Distance(transform.position, selecting.position))
                 {
+
+                    
                     selecting = loot;
+
+                }
+
+                if(selecting == selectedLooting)
+                {
+                    selecting = null;
+                    continue;
                 }
             }
 
@@ -51,7 +72,6 @@ public class LootSelection : MonoBehaviour
         }
         else
         {
-            
             selecting = null;
         }
 
@@ -70,7 +90,7 @@ public class LootSelection : MonoBehaviour
 
             // Color
             Color targetColor = Color.white;
-            switch(selecting.GetComponent<Loot>().rarity)
+            switch(selecting.GetComponent<LootGraphic>().rarity)
             {
                 case Rarity.Common:
                     targetColor = common;
@@ -116,5 +136,36 @@ public class LootSelection : MonoBehaviour
         }
 
         // Looting
+        if(Input.GetKeyDown(KeyCode.H)) 
+        {
+            if(selecting != null && !looting && !inventory.isFull())
+            {
+                selectedLooting = selecting;
+                looting = true;
+            }
+        }
+
+        if(looting && !inventory.isFull())
+        {
+            selectedLooting.position = Vector3.Lerp(selectedLooting.position,transform.position, 10 * Time.deltaTime);
+            selectedLooting.localScale = Vector3.Lerp(selectedLooting.localScale, Vector3.zero, 10 * Time.deltaTime);
+
+            if(Vector3.Distance(selectedLooting.position,transform.position) < 1)
+            {
+                looting = false;
+
+
+                // Add item to inventory
+                LootGraphic lootGraphic = selectedLooting.GetComponent<LootGraphic>();
+                Loot loot = lootGraphic.GetLoot();
+                
+                inventory.slots.Add(loot);
+                inventory.Equip(loot);
+
+                // Remove Icon
+                Destroy(selectedLooting.gameObject);
+                selectedLooting = null;
+            }
+        }
     }
 }
